@@ -6,6 +6,8 @@ interface UserInterface extends Document{
     name?: string,
     email?: string,
     password?: string
+    passwordResetToken?: string,
+    passwordResetExpires?: string
 
 }
 
@@ -23,6 +25,14 @@ const User = new Schema({
   password: {
     type: String,
     required: true,
+    select: false
+  },
+  passwordResetToken: {
+    type: String,
+    select: false
+  },
+  passwordResetExpires: {
+    type: String,
     select: false
   }
 
