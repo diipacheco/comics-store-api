@@ -21,7 +21,9 @@ class App {
 
     private database ():void {
       mongoose.connect('mongodb://192.168.99.100:27012/comics-store', {
-        useNewUrlParser: true
+        useNewUrlParser: true,
+        useFindAndModify: false,
+        useCreateIndex: true
       })
     }
 
