@@ -10,7 +10,7 @@ const routes = Router()
 
 // User
 routes.post('/signup', AuthController.register)
-routes.post('/signin', AuthController.signin)
+routes.post('/signin', authMiddleware, AuthController.signin)
 routes.post('/auth/forgot_password', AuthController.forgotPassword)
 routes.post('/auth/reset_password', AuthController.resetPassword)
 
