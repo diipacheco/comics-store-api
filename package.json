@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"scripts": {
 		"dev": "nodemon src/server.ts",
-		"build": "sucrase ./src -d ./dist --transforms typescript, imports"
+		"build": "sucrase ./src -d ./dist --transforms typescript,imports",
+		"start": "node dist/server.js"
 	},
 	"dependencies": {
 		"bcryptjs": "^2.4.3",
